@@ -1,0 +1,38 @@
+---
+layout: none
+permalink: .htaccess
+---
+FileETag none
+
+Options -Indexes
+ExpiresByType text/html "now"
+ExpiresByType image/gif "modification plus 1 year"
+ExpiresByType image/png "modification plus 1 year"
+ExpiresByType image/jpg "modification plus 1 year"
+ExpiresByType image/ico "modification plus 1 year"
+ExpiresByType text/js "modification plus 1 month"
+ExpiresByType text/css "modification plus 1 month"
+
+ErrorDocument 404 /404.html
+
+# 1 YEAR
+<FilesMatch "\.(ico|pdf|flv)$">
+Header set Cache-Control "max-age=29030400, private"
+</FilesMatch>
+# 1 WEEK
+<FilesMatch "\.(jpg|jpeg|png|gif|swf)$">
+Header set Cache-Control "max-age=604800, private"
+</FilesMatch>
+# 2 DAYS
+<FilesMatch "\.(xml|txt|css|js)$">
+Header set Cache-Control "max-age=172800, private, proxy-revalidate"
+</FilesMatch>
+# 1 MIN
+<FilesMatch "\.(html|htm|php)$">
+Header set Cache-Control "max-age=60, private, proxy-revalidate"
+</FilesMatch>
+
+RewriteEngine On
+RewriteCond %{REQUEST_METHOD} ^(HEAD|GET) [NC]
+RewriteCond %{HTTP:Range} ([0-9]*-[0-9]*)(\s*,\s*[0-9]*-[0-9]*)+
+RewriteRule .* - [F]
