@@ -1,4 +1,11 @@
-domain="denis.evsyukov.org"
+domain          = "denis.evsyukov.org"
+
+public_dir      = "public"    # compiled site directory
+source_dir      = "source"    # source file directory
+deploy_dir      = "_deploy"   # deploy directory (for Github pages deployment)
+
+deploy_branch   = "gh-pages"
+deploy_default  = "push"
 
 task :default => :build
  
@@ -27,9 +34,37 @@ end
 
 desc 'Build, deploy.'
 task :deploy => :build do
-  print "Deploying website to #{domain}\n"
-#  sh "rsync -az --delete public/ ec2:~/www/#{domain}/web/"
-  sh "s3cmd sync -P --delete-removed public/ s3://denis.evsyukov.org/"
+#  Rake::Task[:copydot].invoke(source_dir, public_dir)
+  Rake::Task["#{deploy_default}"].execute
+end
+
+desc "copy dot files for deployment"
+task :copydot, :source, :dest do |t, args|
+  exclusions = [".", "..", ".DS_Store"]
+  Dir["#{args.source}/**/.*"].each do |file|
+    if !File.directory?(file) && !exclusions.include?(File.basename(file))
+      cp(file, file.gsub(/#{args.source}/, "#{args.dest}"));
+    end
+  end
+end
+
+desc "deploy public directory to github pages"
+multitask :push do
+  puts "## Deploying branch to Github Pages "
+  (Dir["#{deploy_dir}/*"]).each { |f| rm_rf(f) }
+  Rake::Task[:copydot].invoke(public_dir, deploy_dir)
+  puts "\n## copying #{public_dir} to #{deploy_dir}"
+  cp_r "#{public_dir}/.", deploy_dir
+  cd "#{deploy_dir}" do
+    system "git add ."
+    system "git add -u"
+    puts "\n## Commiting: Site updated at #{Time.now.utc}"
+    message = "Site updated at #{Time.now.utc}"
+    system "git commit -m \"#{message}\""
+    puts "\n## Pushing generated #{deploy_dir} website"
+    system "git push origin #{deploy_branch} --force"
+    puts "\n## Github Pages deploy complete"
+  end
 end
 
 task :new do
