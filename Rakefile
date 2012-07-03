@@ -35,7 +35,8 @@ end
 desc 'Build, deploy.'
 task :deploy => :build do
 #  Rake::Task[:copydot].invoke(source_dir, public_dir)
-  Rake::Task["#{deploy_default}"].execute
+#  Rake::Task["#{deploy_default}"].execute
+  sh "rsync -az --delete public/ nfs:/home/public/"
 end
 
 desc "copy dot files for deployment"
