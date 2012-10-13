@@ -30,9 +30,6 @@ end
 
 desc 'Build, deploy.'
 task :deploy => :build do
-#  Rake::Task[:copydot].invoke(source_dir, public_dir)
-# Rake::Task["#{deploy_default}"].execute
-  # sh 's3cmd sync --acl-public --reduced-redundancy --no-preserve --add-header "Cache-Control: max-age=86400" --cf-invalidate public/* s3://denis.evsyukov.org/'
   print "Deploy site...\n"
-  system "rsync -az --delete public/ evsyukov:/home/public/"
+  system "rsync -az --delete public/ ec2:~/www/denis/"
 end
