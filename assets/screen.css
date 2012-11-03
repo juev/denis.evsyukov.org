@@ -447,9 +447,8 @@ input, select {
 body {
     width: 450px;
     margin: 30px auto;
-    font-family: "adelle", serif;
+    font-family: "adelle", sans-serif;
     font-size: 17px;
-    /*line-height: 18pt;*/
     color: #4E555D;
     text-align:left;
     overflow:hidden
@@ -459,8 +458,9 @@ p.aligncenter{
 	margin: 40px auto;
 }
 div#header {
-    font-size: 60pt;
-    line-height: 80px;
+    font-family: "tangerine", serif;    
+    font-size: 40pt;
+    line-height: 60px;
     margin: 20px 0;
 }
 nav p {
