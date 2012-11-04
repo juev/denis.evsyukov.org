@@ -458,9 +458,8 @@ p.aligncenter{
 	margin: 40px auto;
 }
 div#header {
-    font-family: "tangerine", serif;    
-    font-size: 40pt;
-    line-height: 60px;
+    font-size: 30pt;
+    line-height: 40px;
     margin: 20px 0;
 }
 nav p {
