@@ -44,10 +44,4 @@ $(document).ready(function() {
         var top = $(document).scrollTop();
         var wHeight = Math.max(640,$(window).height());
     });
-
-    $(window).load(function() {
-        $('.flexslider').flexslider({
-            animation: "slide"
-        });
-    });
 });

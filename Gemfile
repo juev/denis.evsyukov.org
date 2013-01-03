@@ -5,4 +5,5 @@ group :development do
   gem 'jekyll'
   gem 'kramdown'
   gem 'liquid'
+  gem 'jammit'
 end
