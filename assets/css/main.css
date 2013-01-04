@@ -60,7 +60,7 @@ section {
     text-align: center;
     /*padding-left: 15%;*/
     color: #8b0000;
-    text-shadow: black 0.1em 0.1em 0.3em;
+    text-shadow: dimgray 0.1em 0.1em 0.2em;
     max-width: 800px;
 }
 #main h2 {
@@ -78,7 +78,7 @@ section {
     /*width: 520px;*/
     text-align: center;
     color: #8b0000;
-    text-shadow: black 0.1em 0.1em 0.3em;
+    text-shadow: dimgray 0.1em 0.1em 0.2em;
     max-width: 800px;
 }
 
