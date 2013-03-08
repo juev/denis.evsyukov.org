@@ -20,5 +20,6 @@ end
 desc 'Build, deploy.'
 task :deploy => :build do
   print "Deploy site...\n"
-  system "rsync -az --delete public/ ec2:~/www/denis/"
+  #system "rsync -az --delete public/ ec2:~/www/denis/"
+  system "s3cmd sync -P --delete-removed --no-preserve public/ s3://denis.evsyukov.org/"
 end
