@@ -14,52 +14,43 @@
         <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
     <link rel="shortcut icon" href="/favicon.ico">
-    <script type="text/javascript" src="//use.typekit.net/sux8vth.js"></script>
-    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
   </head>
   <body>
-    <div class="container">
-      <nav id="menu">
-        <a href="#main" class="brand">Denis Evsyukov</a>
-        <a href="#about" class="collapse">About</a>
-        <a href="#contact" class="collapse">Contacts</a>
-        <a href="9E1FF748.asc" class="collapse">PGP key</a>
-      </nav>
-      <section id="main" data-navtext="Home">
-        <div class="wrapper">
-          <div id="maincontainer">
-            <h1 itemprop="name">Denis Evsyukov</h1>
-            <h2>To be the best of the rest</h2>
-          </div>
-        </div>
-      </section>
-      <section id="about" data-navtext="About">
-        <div class="wrapper">
-          <div id="aboutcontainer">
-            <div itemprop="description"><p>I live in <span itemprop="address" itemscope itemtype="http://data-vocabulary.org/Address"><span itemprop="locality">Togliatti</span>, <span itemprop="region">Russia</span></span>.</p>
-              <p>In my spare time I create websites<br>and learn new things.</p>
-              <p>Right now I'm engaged in studying of Ruby.</p>
-            </div>
-            <p>I develop and lead the blog <a href="http://www.juev.ru" rel="nofollow" itemprop="url">www.juev.ru</a>.</p>
-          </div>
-        </div>
-      </section>
-      <section id="contact" data-navtext="Contacts">
-        <div class="wrapper">
-          <div id="contactcontainer">
-            <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#100;&#101;&#110;&#105;&#115;&#64;&#101;&#118;&#115;&#121;&#117;&#107;&#111;&#118;&#46;&#111;&#114;&#103;" rel="nofollow" itemprop="email"><i class="icon-inbox-box"></i>&nbsp;</a>
-            <a href="https://twitter.com/#!/Juev" rel="nofollow" itemprop="url"><i class="icon-twitter"></i>&nbsp;</a>
-            <a href="http://github.com/juev" rel="nofollow" itemprop="url"><i class="icon-github"></i>&nbsp;</a>
-            <a href="http://plus.google.com/116661482374124481456?rel=author" rel="nofollow" itemprop="url"><i class="icon-googleplus"></i>&nbsp;</a>
-            <a href="http://www.flickr.com/photos/juev" rel="nofollow" itemprop="url"><i class="icon-flickr"></i>&nbsp;</a>
-            <a href="http://pinboard.in/u:juev" rel="nofollow" itemprop="url"><i class="icon-bookmark-empty"></i>&nbsp;</a>
-          </div>
-        </div>
-      </section>
+    <div id="card">
+      <img id="avatar" itemprop="image" src="http://static.juev.ru/avatar.jpg">
+      <h1 itemprop="name"><a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#100;&#101;&#110;&#105;&#115;&#64;&#101;&#118;&#115;&#121;&#117;&#107;&#111;&#118;&#46;&#111;&#114;&#103;">Denis Evsyukov</a></h1>
+      <p><em>n.</em> a fine geek from <span itemprop="address" itemscope itemtype="http://data-vocabulary.org/Address"><span itemprop="region">Russia</span></span></p>
     </div>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="/js/vendor/jquery-1.8.3.min.js"><\/script>')</script>
-    <script src="/assets/master.js"></script>
+    <ul id="links">
+      <li><a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#100;&#101;&#110;&#105;&#115;&#64;&#101;&#118;&#115;&#121;&#117;&#107;&#111;&#118;&#46;&#111;&#114;&#103;" class="a" rel="nofollow" itemprop="email">
+        Email: <strong>&#100;&#101;&#110;&#105;&#115;&#64;&#101;&#118;&#115;&#121;&#117;&#107;&#111;&#118;&#46;&#111;&#114;&#103;</strong>
+        <div>&rarr;</div>
+      </a></li>
+      <li><a href="http://twitter.com/Juev" class="b" rel="nofollow" itemprop="url">
+        Twitter: <strong>@Juev</strong>
+        <div>&rarr;</div>
+      </a></li>
+      <li><a href="http://www.juev.ru" class="c" rel="nofollow" itemprop="url">
+        Read <strong>my blog</strong>
+        <div>&rarr;</div>
+      </a></li>
+      <li><a href="http://github.com/juev" class="d" rel="nofollow" itemprop="url">
+        Have a look <strong>at my code</strong>
+        <div>&rarr;</div>
+      </a></li>
+      <li><a href="http://pinboard.in/u:juev" class="e" rel="nofollow" itemprop="url">
+        Check <strong>my bookmarks</strong>
+        <div>&rarr;</div>
+      </a></li>
+      <li><a href="http://www.flickr.com/photos/juev" class="f" rel="nofollow" itemprop="url">
+        Look <strong>at my photos</strong>
+        <div>&rarr;</div>
+      </a></li>
+    </ul>
+    <div id="footer">
+      2013 © Denis Evsyukov
+    </div>
+    <!-- <script src="/assets/master.js"></script> -->
     <script>
       var _gaq=[['_setAccount','UA-26480484-3'],['_trackPageview']];
       (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];

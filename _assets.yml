@@ -8,11 +8,7 @@ javascript_compressor:  closure     # (yui, closure)
 
 stylesheets:
   master:
-    - assets/css/base.css
-    - assets/css/skeleton.css    
-    - assets/css/elusive-webfont.css
     - assets/css/main.css
-    - assets/css/layout.css
 
 javascripts:
   master:
