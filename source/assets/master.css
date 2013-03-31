@@ -8,7 +8,7 @@ body {
   line-height: 1.5;
   margin: 0 auto;
   padding-top: 3em;
-  width: 400px;
+  max-width: 400px;
 }
 
 #avatar {
@@ -17,13 +17,9 @@ body {
   width: 80px;
 }
 
-h1 a {
+h1 {
   color: #000;
-  text-decoration: none;
-}
-
-h1 a:hover {
-  text-decoration: underline;
+  text-shadow: 2px 2px #888;
 }
 
 #card {
@@ -47,17 +43,12 @@ h1 a:hover {
 }
 
 #links a {
-  background-color: #ccc;
   color: #fff;
   display: block;
   text-decoration: none;
   text-shadow: 0 1px 0 rgba(0,0,0,0.2);
   padding: 0.5em 10px;
   width: 380px;
-}
-
-#links a:hover {
-  text-decoration: underline;
 }
 
 #links a.a {
@@ -86,6 +77,11 @@ h1 a:hover {
 
 #links a div {
   float: right;
+  opacity:0
+}
+
+#links a:hover div {
+  opacity:1
 }
 
 #footer {

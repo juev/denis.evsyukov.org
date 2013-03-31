@@ -5,16 +5,16 @@ source_dir      = "source"    # source file directory
 
 task :default => :build
 
-desc 'Build site with Jekyll.'
+desc 'Build site with Middleman.'
   task :build => :clean do
   print "Compiling website...\n"
-  system "jekyll"
+  system "middleman build"
 end
 
 desc 'Clean public folder'
 task :clean do
   print "Clean public folder.\n"
-  system "rm -rf public/*"
+  system "rm -rf #{public_dir}/*"
 end
 
 desc 'Build, deploy.'

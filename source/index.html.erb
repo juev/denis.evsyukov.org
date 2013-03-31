@@ -9,7 +9,7 @@
     <meta name="description" content="Personal Page of Denis Evsyukov">
     <meta name="author" content="Denis Evsyukov">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link rel="stylesheet" href="/assets/master.css">
+    <%= stylesheet_link_tag "master" %>
     <!--[if lt IE 9]>
         <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -18,7 +18,7 @@
   <body>
     <div id="card">
       <img id="avatar" itemprop="image" src="http://static.juev.ru/avatar.jpg">
-      <h1 itemprop="name"><a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#100;&#101;&#110;&#105;&#115;&#64;&#101;&#118;&#115;&#121;&#117;&#107;&#111;&#118;&#46;&#111;&#114;&#103;">Denis Evsyukov</a></h1>
+      <h1 itemprop="name">Denis Evsyukov</h1>
       <p><em>n.</em> a fine geek from <span itemprop="address" itemscope itemtype="http://data-vocabulary.org/Address"><span itemprop="region">Russia</span></span></p>
     </div>
     <ul id="links">
@@ -50,7 +50,7 @@
     <div id="footer">
       2013 © Denis Evsyukov
     </div>
-    <!-- <script src="/assets/master.js"></script> -->
+    <!--<%= javascript_include_tag  "master" %> -->
     <script>
       var _gaq=[['_setAccount','UA-26480484-3'],['_trackPageview']];
       (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
