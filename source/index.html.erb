@@ -17,7 +17,7 @@
   </head>
   <body>
     <div id="card">
-      <img id="avatar" itemprop="image" src="http://static.juev.ru/avatar.jpg">
+      <img id="avatar" itemprop="image" src="/images/avatar.jpg">
       <h1 itemprop="name">Denis Evsyukov</h1>
       <p><em>n.</em> a fine geek from <span itemprop="address" itemscope itemtype="http://data-vocabulary.org/Address"><span itemprop="region">Russia</span></span></p>
     </div>
@@ -51,7 +51,20 @@
       2013 © Denis Evsyukov
     </div>
     <!--<%= javascript_include_tag  "master" %> -->
-    <script>
+    <script type="text/javascript">
+      var _gauges = _gauges || [];
+      (function() {
+       var t   = document.createElement('script');
+       t.type  = 'text/javascript';
+       t.async = true;
+       t.id    = 'gauges-tracker';
+       t.setAttribute('data-site-id', '4ef57888f5a1f53448000001');
+       t.src = '//secure.gaug.es/track.js';
+       var s = document.getElementsByTagName('script')[0];
+       s.parentNode.insertBefore(t, s);
+       })();
+     </script>
+     <script>
       var _gaq=[['_setAccount','UA-26480484-3'],['_trackPageview']];
       (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
       g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
