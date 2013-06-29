@@ -20,7 +20,7 @@ end
 desc 'Build, deploy.'
 task :deploy => :build do
   print "Deploy site...\n"
-  system "rsync -az --delete public/ ec2:~/www/denis/"
+  system "rsync -az --delete public/ o2:~/www/denis/"
   #system "s3cmd sync -P --delete-removed --no-preserve public/ s3://denis.evsyukov.org/"
   # system 's3cmd sync --acl-public --exclude "*.*" --include "*.png" --include "*.jpg" --include "*.ico" --add-header="Expires: Sat, 20 Nov 2020 18:46:39 GMT" --add-header="Cache-Control: max-age=6048000" --no-preserve public/ s3://denis.evsyukov.org/'
   # system 's3cmd sync --acl-public --exclude "*.*" --include  "*.css" --include "*.js" --add-header="Cache-Control: max-age=604800"  --no-preserve public/ s3://denis.evsyukov.org'
