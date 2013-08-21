@@ -1,1 +1,30 @@
-*{margin:0;padding:0}body{font-family:'Helvetica Neue',Arial,sans-serif;line-height:1.5;margin:0 auto;padding-top:3em;max-width:400px}#avatar{float:left;margin-right:1em;width:80px}h1{color:#000;text-shadow:2px 2px #888}#card{background-color:#eee;border:1px solid #ccc;height:80px;padding:1em}#card p{color:#666}#links{list-style-type:none;margin-top:3em}#links li{margin-top:1em}#links a{color:#fff;display:block;text-decoration:none;text-shadow:0 1px 0 rgba(0,0,0,0.2);padding:.5em 10px;width:380px}#links a.a{background-color:#D23A36}#links a.b{background-color:#D27E36}#links a.c{background-color:#52ADB1}#links a.d{background-color:#98CC35}#links a.e{background-color:#2B79C2}#links a.f{background-color:#FF0686}#links a div{float:right;opacity:0}#links a:hover div{opacity:1}#footer{border-top:1px solid #ccc;color:#666;font-size:12px;margin-top:3em;padding-top:1em}
+body {
+  text-align: center;
+  font-size: 14pt;
+  /* font-family: 'Roboto', sans-serif; */
+  font-family: 'museo-slab', serif;
+}
+
+#slant {
+  text-align: left;
+  margin: 20% 0 0 20%;
+}
+
+h1 {
+  margin-bottom: 7pt;
+  font-family: 'museo-slab';
+  font-size: 16pt;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+a {
+  color: #AAA;
+  display: block;
+  text-decoration: none;
+  margin: 0 20px 5px 0;
+}
+
+a:hover {
+  color: #268bd2;
+}
