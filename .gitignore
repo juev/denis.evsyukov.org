@@ -5,15 +5,13 @@
 # git config --global core.excludesfile ~/.gitignore_global
 
 # Ignore bundler config
-/.bundle
-
-# Ignore the build directory
-/public
+.bundle
 
 # Ignore Sass' cache
-/.sass-cache
+.sass-cache
 
 # Ignore rbenv directives
 .rbenv-version
 .rbenv-gemsets
 
+node_modules
