@@ -9,6 +9,7 @@ before_install:
   - npm install -g grunt-cli
 install:
   - npm install
+  - bundle install
 script:
   - grunt
 after_success: 
