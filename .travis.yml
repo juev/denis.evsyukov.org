@@ -1,0 +1,23 @@
+language: ruby
+rvm:
+  - 2.1
+cache:
+  - bundler
+before_install:
+  - export TZ=Europe/Samara
+  - date
+  - npm install -g grunt-cli
+install:
+  - npm install
+script:
+  - grunt
+after_success: 
+  - bundle exec rake
+branches:
+  only:
+    - master
+env:
+  global:
+    - secure: CopJRXGMw2YpdqBeVvTwhG3RwMVqwSiSCjh1Fikei/gIwina0mkyiJGuFST/eaLBIV6OgoUnBbAClQCddUefF8cgqFpDPlWQiJfr3goCux/vPD7ljaEbPG8K7nAOrDOPf8z/Eo8eMJhxpX9HG65MxB+7C8M18OSdov2k2QLrlTw=
+    - secure: Bn3A5KMVUQDLgLpnCvNVthb3Q1ZTOjHeKma25M1r6598QRYc5sapngSoCA6gDqtdaszYNEZTRNiKwawRm5NhrT+ZNsqksL7erZgzfyAgEMIjoB6CQU4Bnj5ig7vAz4c7G5TLWXUjpIi2iGlsS3VmlAXMlq6mNdfo5W9mpByeMVw=
+    - secure: SA2mQQETbOCmqfSVi3pEP4UX0rEsf9YH9mQtyxpkEg+ca0dCRh9b4VpMPdLZAaQNQ2cqLSN/czssMVQj1l5EDDsIMPmLlA73OcBVF0aVCjCc0M/v9CqrgGuKi3pLXhDqWrvfQgw9xWbY6n3wM/zTyWquLpYQ4cM3z3d4Rv1uY+o=
