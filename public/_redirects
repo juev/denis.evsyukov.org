@@ -1,4 +1,0 @@
-# Redirect default Netlify subdomain to primary domain
-http://fervent-chandrasekhar-509ce9.netlify.com/* https://denis.evsyukov.org/:splat 301!
-# Redirect http to https
-http://denis.evsyukov.org/* https://denis.evsyukov.org:splat 301!
