@@ -2,8 +2,35 @@
 ID = "8cec229d-0d5d-4980-aa87-df9eb89d64a8"
 
 [build]
-  publish = "public/"
-  command = "hugo"
+publish = "public"
+command = "hugo --minify"
+
+[context.production.environment]
+HUGO_VERSION = "0.47.1"
+HUGO_ENV = "production"
+HUGO_ENABLEGITINFO = "true"
+
+[context.split1]
+command = "hugo --enableGitInfo"
+
+[context.split1.environment]
+HUGO_VERSION = "0.47.1"
+HUGO_ENV = "production"
+
+[context.deploy-preview]
+command = "hugo --buildFuture -b $DEPLOY_PRIME_URL"
+
+[context.deploy-preview.environment]
+HUGO_VERSION = "0.47.1"
+
+[context.branch-deploy]
+command = "hugo -b $DEPLOY_PRIME_URL"
+
+[context.branch-deploy.environment]
+HUGO_VERSION = "0.47.1"
+
+[context.next.environment]
+HUGO_ENABLEGITINFO = "true"
  
 [[redirects]]
   from = "https://fervent-chandrasekhar-509ce9.netlify.com/*"
