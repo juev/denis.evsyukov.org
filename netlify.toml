@@ -2,7 +2,7 @@
 ID = "8cec229d-0d5d-4980-aa87-df9eb89d64a8"
 
 [build]
-publish = "public"
+publish = "public/"
 command = "hugo --minify"
 
 [context.production.environment]
