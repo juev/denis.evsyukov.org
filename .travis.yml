@@ -1,3 +1,8 @@
+language: go
+
+go:
+  - 1.11.x
+
 deploy:
   provider: s3
   access_key_id: "$AWS_KEY_ID"
@@ -9,6 +14,7 @@ deploy:
   local_dir: static
   detect_encoding: true
   cache_control: "max-age=0"
+
 env:
   global:
   - secure: "ZTAyq7PzZnUsxF7WttucnzyKuOSECKzbF1iNxeBOUQ0h2de1EPBaykLyDQXPddf3oXRsbUA3BzA4JtVu2X+7fLZRNZL1n1gUjF1s5Jt2k8Ps7kz/nawbdFJ/y6P6s8BwRJ3BhDV2s6UeQF1C8buFBQwXbWECUZl2nh1efL14yzI="
