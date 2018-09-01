@@ -21,8 +21,8 @@ deploy:
   detect_encoding: true
   cache_control:
     - "max-age=2592000":
-        - "*.ico"
-        - "*.jpg"
+        - "**/*.ico"
+        - "**/*.jpg"
     - "max-age=0"
 
 env:
