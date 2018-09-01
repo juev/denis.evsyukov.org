@@ -20,10 +20,12 @@ deploy:
   local_dir: static
   detect_encoding: true
   cache_control:
-    - "max-age=2592000":
-        - "**/*.ico"
-        - "**/*.jpg"
-    - "max-age=0"
+    - "**/*.ico":
+        - "max-age=2592000"
+    - "**/*.jpg":
+        - "max-age=2592000"
+    - "**/*":
+        - "max-age=0"
 
 env:
   global:
