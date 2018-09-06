@@ -5,21 +5,10 @@ go:
 
 install:
   - rm -rf public || exit 0
+  - go get -u -v github.com/bep/s3deploy
 
 script:
-  - echo "Hello World!"
-
-deploy:
-  provider: s3
-  access_key_id: "$AWS_KEY_ID"
-  secret_access_key: "$AWS_ACCESS_KEY"
-  bucket: "denis.evsyukov.org"
-  skip_cleanup: true
-  region: "eu-west-1"
-  acl: public_read
-  local_dir: static
-  detect_encoding: true
-  cache_control: "max-age=0"
+  - s3deploy -source=static/ -region=eu-west-1 -bucket=denis.evsyukov.org -key "$AWS_KEY_ID" -secret "$AWS_ACCESS_KEY"
 
 env:
   global:
