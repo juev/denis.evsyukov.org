@@ -8,7 +8,7 @@ install:
   - go get -u -v github.com/bep/s3deploy
 
 script:
-  - s3deploy -source=static/ -region=eu-west-1 -bucket=denis.evsyukov.org -key "$AWS_KEY_ID" -secret "$AWS_ACCESS_KEY"
+  - s3deploy -source=static/ -region=eu-west-1 -bucket=denis.evsyukov.org -key "$AWS_KEY_ID" -secret "$AWS_ACCESS_KEY" -force -v
 
 env:
   global:
