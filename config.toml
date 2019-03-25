@@ -1,6 +1,0 @@
-baseURL = "https://denis.evsyukov.org/"
-languageCode = "en-us"
-title = "Denis Evsyukov"
-[indexes]
-    tags = ""
-    categories = ""

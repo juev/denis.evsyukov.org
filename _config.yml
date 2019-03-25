@@ -1,0 +1,54 @@
+---
+url:         https://denis.evsyukov.org
+future:      false
+lsi:         false
+markdown:    kramdown
+permalink:   pretty
+incremental: false
+
+timezone: Europe/Moscow
+
+root:        /
+destination: public
+highlighter: rouge
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+title: "Denis Evsyukov"
+
+sass:
+  style: compressed
+  sass_dir: _assets/scss
+
+author:
+  twitter: Juev
+
+twitter:
+  username: Juev
+  card: summary
+
+logo: "https://static.juev.org/images/calvin.png"
+
+social:
+  name: Denis Evsyukov
+  links:
+    - https://twitter.com/Juev
+    - https://www.facebook.com/denis.evsyukov
+    - https://github.com/juev
+    - https://keybase.io/juev
+
+lang: ru_RU
+collections:
+  files:
+    output: true
+    permalink: /:path
+
+# HTML Compression
+# - http://jch.penibelst.de/
+compress_html:
+  clippings: all
+  comments: ["<!-- ", " -->"]
+  ignore:
+envs: development
