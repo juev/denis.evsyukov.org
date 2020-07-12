@@ -9,15 +9,19 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
-    - uses: maxheld83/ghpages@v0.2.1
-      env:
-        BUILD_DIR: "sources"
-        GH_PAT: ${{ secrets.GH_PAT }}
-        GITHUB_ACTOR: juev
-    - name: Purge cache
-      uses: jakejarvis/cloudflare-purge-action@master
-      env:
-        CLOUDFLARE_ZONE: ${{ secrets.CLOUDFLARE_ZONE }}
-        CLOUDFLARE_TOKEN: ${{ secrets.CLOUDFLARE_TOKEN }}
+      - uses: actions/checkout@v1
+      - name: Install s3deploy
+        run: ./ci-install-s3deploy.sh
+        env:
+          S3DEPLOY_VERSION: 2.3.5
+      - name: Deploy to S3
+        run: ./s3deploy -bucket denis.evsyukov.org -public-access -region eu-west-2 -max-delete -1 -source sources/
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      - name: Purge cache
+        uses: jakejarvis/cloudflare-purge-action@master
+        env:
+          CLOUDFLARE_ZONE: ${{ secrets.CLOUDFLARE_ZONE }}
+          CLOUDFLARE_TOKEN: ${{ secrets.CLOUDFLARE_TOKEN }}
 
