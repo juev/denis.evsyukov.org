@@ -11,7 +11,12 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: Install s3deploy
-        run: ./ci-install-s3deploy.sh
+        run:  |
+          S3DEPLOY_DOWNLOAD=s3deploy_${S3DEPLOY_VERSION}_Linux-64bit.tar.gz
+          set -x
+          set -e
+          wget https://github.com/bep/s3deploy/releases/download/v${S3DEPLOY_VERSION}/${S3DEPLOY_DOWNLOAD}
+          tar xvzf ${S3DEPLOY_DOWNLOAD} s3deploy
         env:
           S3DEPLOY_VERSION: 2.3.5
       - name: Deploy to S3
