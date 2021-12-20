@@ -20,7 +20,7 @@ jobs:
         env:
           S3DEPLOY_VERSION: 2.6.0
       - name: Deploy to S3
-        run: ./s3deploy -bucket denis.evsyukov.org -public-access -region eu-west-2 -max-delete -1 -source sources/
+        run: ./s3deploy -bucket denis.evsyukov.org -acl='public-read' -region eu-west-2 -max-delete -1 -source sources/
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
