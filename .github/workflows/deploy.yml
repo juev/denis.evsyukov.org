@@ -18,7 +18,7 @@ jobs:
           wget https://github.com/bep/s3deploy/releases/download/v${S3DEPLOY_VERSION}/${S3DEPLOY_DOWNLOAD}
           tar xvzf ${S3DEPLOY_DOWNLOAD} s3deploy
         env:
-          S3DEPLOY_VERSION: 2.3.5
+          S3DEPLOY_VERSION: 2.6.0
       - name: Deploy to S3
         run: ./s3deploy -bucket denis.evsyukov.org -public-access -region eu-west-2 -max-delete -1 -source sources/
         env:
