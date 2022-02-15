@@ -1,0 +1,4 @@
+# You can encrypt message to me with age-encryption.org
+#
+# age -e -a -R <(curl -fs https://denis.evsyukov.org/age.txt)
+age12pmcx9kle0mzpzry870fjk3fgaj0q5z53x3rnacpmcet73j2c99s9fvupz
