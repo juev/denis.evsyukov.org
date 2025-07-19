@@ -1,0 +1,23 @@
+{
+    "name": "Denis Evsyukov - Personal Website",
+    "short_name": "Denis Evsyukov",
+    "description": "Personal website of Denis Evsyukov, Golang programmer specializing in distributed systems, cloud computing, and infrastructure automation.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#2c3e50",
+    "orientation": "portrait-primary",
+    "icons": [
+        {
+            "src": "/favicon.ico",
+            "sizes": "16x16 32x32 48x48",
+            "type": "image/x-icon"
+        }
+    ],
+    "categories": [
+        "business",
+        "productivity"
+    ],
+    "lang": "en-US",
+    "scope": "/"
+}

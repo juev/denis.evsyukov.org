@@ -1,33 +1,60 @@
 /*
-    Content-Security-Policy: "default-src 'self' 'unsafe-inline' static.juev.org data:; font-src 'self' fonts.gstatic.com data:; child-src 'none'; upgrade-insecure-requests"
-    Strict-Transport-Security: "max-age=1000"
-    X-Xss-Protection: "1; mode=block"
-    X-Frame-Options: "DENY"
-    X-Content-Type-Options: "nosniff"
-    Referrer-Policy: "strict-origin-when-cross-origin"
-    Feature-Policy: "fullscreen *"
+  Content-Security-Policy: "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' static.juev.org data:; font-src 'self' fonts.gstatic.com data:; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; upgrade-insecure-requests"
+  Strict-Transport-Security: "max-age=31536000; includeSubDomains; preload"
+  X-XSS-Protection: "1; mode=block"
+  X-Frame-Options: "DENY"
+  X-Content-Type-Options: "nosniff"
+  Referrer-Policy: "strict-origin-when-cross-origin"
+  Permissions-Policy: "camera=(), microphone=(), geolocation=(), interest-cohort=()"
+  Cross-Origin-Embedder-Policy: "require-corp"
+  Cross-Origin-Opener-Policy: "same-origin"
+  Cross-Origin-Resource-Policy: "same-origin"
+
 /*.html
-    Cache-Control: "public, no-cache, must-revalidate"
+  Cache-Control: "public, no-cache, must-revalidate"
+
 /*.xml
-    Cache-Control: "public, no-cache, must-revalidate"
-    Content-Type: "application/xml; charset=utf-8"
+  Cache-Control: "public, no-cache, must-revalidate"
+  Content-Type: "application/xml; charset=utf-8"
+
 /*.json
-    Cache-Control: "public, no-cache, must-revalidate"
+  Cache-Control: "public, no-cache, must-revalidate"
+
 /*.js
-    Cache-Control: "max-age=630720000, no-transform, public"
+  Cache-Control: "max-age=31536000, no-transform, public, immutable"
+
 /*.css
-    Cache-Control: "max-age=630720000, no-transform, public"
+  Cache-Control: "max-age=31536000, no-transform, public, immutable"
+
 /*.png
-    Cache-Control: "max-age=630720000, no-transform, public"
+  Cache-Control: "max-age=31536000, no-transform, public, immutable"
+
 /*.jpg
-    Cache-Control: "max-age=630720000, no-transform, public"
+  Cache-Control: "max-age=31536000, no-transform, public, immutable"
+
 /*.gif
-    Cache-Control: "max-age=630720000, no-transform, public"
+  Cache-Control: "max-age=31536000, no-transform, public, immutable"
+
 /*.svg
-    Cache-Control: "max-age=630720000, no-transform, public"
+  Cache-Control: "max-age=31536000, no-transform, public, immutable"
+
+/*.webp
+  Cache-Control: "max-age=31536000, no-transform, public, immutable"
+
+/*.avif
+  Cache-Control: "max-age=31536000, no-transform, public, immutable"
+
 /*.ttf
-    Cache-Control: "max-age=630720000, no-transform, public"
+  Cache-Control: "max-age=31536000, no-transform, public, immutable"
+
+/*.woff
+  Cache-Control: "max-age=31536000, no-transform, public, immutable"
+
+/*.woff2
+  Cache-Control: "max-age=31536000, no-transform, public, immutable"
+
 /*.ico
-    Cache-Control: "max-age=630720000, no-transform, public"
+  Cache-Control: "max-age=31536000, no-transform, public, immutable"
+
 https://:project.pages.dev/*
-    X-Robots-Tag: noindex
+  X-Robots-Tag: noindex
