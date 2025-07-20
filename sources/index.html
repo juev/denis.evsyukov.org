@@ -30,12 +30,6 @@ May the charm be with you!
     <meta property="profile:gender" content="male">
     <meta property="profile:username" content="juev">
     
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Denis Evsyukov - Golang Developer">
-    <meta name="twitter:description" content="Golang programmer specializing in distributed systems, cloud computing, and infrastructure automation.">
-    <meta name="twitter:image" content="https://static.juev.org/juev.jpg">
-    
     <!-- Viewport and mobile -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
     <meta name="theme-color" content="#ffffff">
@@ -87,11 +81,12 @@ May the charm be with you!
         
         html {
             font-size: 16px;
-            line-height: 1.6;
+            line-height: 1.7;
+            font-weight: 500;
         }
         
         body {
-            color: #333;
+            color: #232323;
             background: #fff;
             font-family: 'Lucida Console', 'Monaco', 'Courier New', monospace;
             margin: 0;
@@ -100,49 +95,61 @@ May the charm be with you!
             display: flex;
             align-items: center;
             justify-content: center;
+            font-weight: 500;
         }
         
         .container {
             max-width: 43em;
             width: 100%;
             padding: 0 1rem;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(44,62,80,0.07);
         }
         
         h1 {
-            font-size: 1.8rem;
-            margin-bottom: 0.5rem;
+            font-size: 2.1rem;
+            margin-bottom: 0.7rem;
             color: #2c3e50;
+            font-weight: 700;
+            letter-spacing: 0.01em;
         }
         
         h2 {
-            font-size: 1.3rem;
+            font-size: 1.4rem;
             margin: 2rem 0 1rem 0;
             color: #34495e;
+            font-weight: 600;
         }
         
         p {
-            margin: 1rem 0;
-            font-size: 0.9rem;
+            margin: 1.1rem 0;
+            font-size: 1.05rem;
+            font-weight: 500;
         }
         
         ul {
-            margin: 1rem 0;
+            margin: 1.1rem 0;
             padding-left: 1.5rem;
         }
         
         li {
-            margin: 0.5rem 0;
-            font-size: 0.9rem;
+            margin: 0.7rem 0;
+            font-size: 1.05rem;
+            font-weight: 500;
         }
         
         a {
-            color: #3498db;
+            color: #2176c1;
             text-decoration: none;
-            border-bottom: 1px dotted #3498db;
+            border-bottom: 1px dotted #2176c1;
+            font-weight: 600;
+            font-size: 1.07em;
+            transition: color 0.2s;
         }
         
         a:hover {
-            color: #2980b9;
+            color: #174e7c;
             border-bottom-style: solid;
         }
         
@@ -153,33 +160,57 @@ May the charm be with you!
         
         @media screen and (max-width: 768px) {
             html {
-                font-size: 14px;
+                font-size: 15px;
             }
-            
             body {
-                padding: 15px;
+                padding: 12px;
             }
-            
             .container {
-                padding: 0;
+                padding: 0.2rem;
             }
-            
             h1 {
-                font-size: 1.6rem;
+                font-size: 1.5rem;
             }
-            
             h2 {
-                font-size: 1.2rem;
+                font-size: 1.15rem;
             }
         }
         
         @media screen and (max-width: 480px) {
             html {
-                font-size: 12px;
+                font-size: 17px;
             }
-            
             body {
-                padding: 10px;
+                padding: 4vw 0.5vw;
+            }
+            .container {
+                box-shadow: none;
+                border-radius: 0;
+                padding: 0.1rem;
+            }
+            h1 {
+                font-size: 1.25rem;
+                font-weight: 700;
+                margin-bottom: 0.8rem;
+            }
+            h2 {
+                font-size: 1.05rem;
+                font-weight: 600;
+                margin: 1.2rem 0 0.7rem 0;
+            }
+            p, li {
+                font-size: 1.01rem;
+                font-weight: 500;
+                line-height: 1.7;
+            }
+            ul {
+                margin: 0.7rem 0;
+                padding-left: 1.1rem;
+            }
+            a {
+                font-size: 1.05em;
+                font-weight: 600;
+                border-bottom-width: 2px;
             }
         }
         
