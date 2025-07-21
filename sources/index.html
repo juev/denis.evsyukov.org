@@ -96,6 +96,24 @@ May the charm be with you!
             align-items: center;
             justify-content: center;
             font-weight: 500;
+            transition: color 0.3s ease, background-color 0.3s ease;
+        }
+        
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 6px;
+            background: #2176c1;
+            color: white;
+            padding: 8px;
+            text-decoration: none;
+            border-radius: 4px;
+            z-index: 1000;
+            font-weight: 600;
+        }
+        
+        .skip-link:focus {
+            top: 6px;
         }
         
         .container {
@@ -105,6 +123,7 @@ May the charm be with you!
             background: #fff;
             border-radius: 12px;
             box-shadow: 0 2px 12px rgba(44,62,80,0.07);
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
         }
         
         h1 {
@@ -154,8 +173,18 @@ May the charm be with you!
         }
         
         a:focus {
-            outline: 2px solid #3498db;
+            outline: 3px solid #3498db;
+            outline-offset: 3px;
+            border-radius: 2px;
+        }
+        
+        button:focus,
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: 3px solid #3498db;
             outline-offset: 2px;
+            border-radius: 2px;
         }
         
         @media screen and (max-width: 768px) {
@@ -237,6 +266,59 @@ May the charm be with you!
             }
         }
         
+        @media (prefers-color-scheme: dark) {
+            body {
+                color: #e2e8f0;
+                background: #0f172a;
+            }
+            
+            .container {
+                background: #1e293b;
+                box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+            }
+            
+            h1 {
+                color: #f1f5f9;
+            }
+            
+            h2 {
+                color: #cbd5e1;
+            }
+            
+            p, li {
+                color: #e2e8f0;
+            }
+            
+            a {
+                color: #60a5fa;
+                border-bottom-color: #60a5fa;
+            }
+            
+            a:hover {
+                color: #93c5fd;
+                border-bottom-color: #93c5fd;
+            }
+            
+            .skip-link {
+                background: #1e40af;
+            }
+            
+            .skip-link:focus {
+                background: #2563eb;
+            }
+            
+            a:focus {
+                outline-color: #60a5fa;
+            }
+            
+            button:focus,
+            input:focus,
+            select:focus,
+            textarea:focus {
+                outline-color: #60a5fa;
+            }
+        }
+        
         @media (prefers-reduced-motion: reduce) {
             * {
                 animation-duration: 0.01ms !important;
@@ -248,7 +330,8 @@ May the charm be with you!
 </head>
 
 <body>
-    <main class="container">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <main id="main-content" class="container">
         <header>
             <h1>Hi there, I'm Denis! 👋</h1>
             <p>I'm a Golang programmer specializing in distributed systems, cloud computing, and infrastructure automation.</p>

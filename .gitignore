@@ -3,3 +3,14 @@ public/*
 vendor/*
 Gemfile.lock
 .bundle/*
+# Playwright
+screenshots/*
+node_modules/*
+playwright-report/*
+test-results/*
+tests/*
+package-lock.json
+package.json
+playwright.config.js
+playwright-simple.config.js
+TEST_REPORT.md
