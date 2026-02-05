@@ -75,19 +75,37 @@ May the charm be with you!
     </script>
     
     <style type="text/css">
+        :root {
+            --color-primary: #2176c1;
+            --color-primary-dark: #174e7c;
+            --color-accent: #3498db;
+            --color-text: #232323;
+            --color-text-secondary: #34495e;
+            --color-bg: #fff;
+            --color-bg-secondary: #fff;
+            --color-heading: #2c3e50;
+            --spacing-sm: 0.7rem;
+            --spacing-md: 1.1rem;
+            --spacing-lg: 2rem;
+            --border-radius: 12px;
+            --transition-fast: 0.2s;
+            --transition-medium: 0.3s;
+            --gradient-go: linear-gradient(135deg, #00758f 0%, #29beb0 100%);
+        }
+
         * {
             box-sizing: border-box;
         }
-        
+
         html {
             font-size: 16px;
             line-height: 1.7;
             font-weight: 500;
         }
-        
+
         body {
-            color: #232323;
-            background: #fff;
+            color: var(--color-text);
+            background: var(--color-bg);
             font-family: 'Lucida Console', 'Monaco', 'Courier New', monospace;
             margin: 0;
             padding: 20px;
@@ -96,7 +114,52 @@ May the charm be with you!
             align-items: center;
             justify-content: center;
             font-weight: 500;
-            transition: color 0.3s ease, background-color 0.3s ease;
+            transition: color var(--transition-medium) ease, background-color var(--transition-medium) ease;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .container > header,
+        .container > section,
+        .container > footer {
+            animation: fadeInUp 0.6s ease-out backwards;
+        }
+
+        .container > header {
+            animation-delay: 0.1s;
+        }
+
+        .container > section:nth-of-type(1) {
+            animation-delay: 0.2s;
+        }
+
+        .container > section:nth-of-type(2) {
+            animation-delay: 0.3s;
+        }
+
+        .container > section:nth-of-type(3) {
+            animation-delay: 0.4s;
+        }
+
+        .container > section:nth-of-type(4) {
+            animation-delay: 0.5s;
+        }
+
+        .container > section:nth-of-type(5) {
+            animation-delay: 0.6s;
+        }
+
+        .container > footer {
+            animation-delay: 0.7s;
         }
         
         .skip-link {
@@ -120,56 +183,109 @@ May the charm be with you!
             max-width: 43em;
             width: 100%;
             padding: 0 1rem;
-            background: #fff;
-            border-radius: 12px;
+            background: var(--color-bg-secondary);
+            border-radius: var(--border-radius);
             box-shadow: 0 2px 12px rgba(44,62,80,0.07);
-            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+            transition: background-color var(--transition-medium) ease, box-shadow var(--transition-medium) ease;
         }
-        
+
         h1 {
             font-size: 2.1rem;
-            margin-bottom: 0.7rem;
-            color: #2c3e50;
+            margin-bottom: var(--spacing-sm);
+            background: var(--gradient-go);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
             font-weight: 700;
             letter-spacing: 0.01em;
         }
-        
+
         h2 {
             font-size: 1.4rem;
-            margin: 2rem 0 1rem 0;
-            color: #34495e;
+            margin: var(--spacing-lg) 0 1rem 0;
+            color: var(--color-text-secondary);
             font-weight: 600;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--gradient-go);
+            border-radius: 2px;
         }
         
         p {
-            margin: 1.1rem 0;
+            margin: var(--spacing-md) 0;
             font-size: 1.05rem;
             font-weight: 500;
         }
-        
+
         ul {
-            margin: 1.1rem 0;
+            margin: var(--spacing-md) 0;
             padding-left: 1.5rem;
+            list-style: none;
         }
-        
+
+        ul li {
+            position: relative;
+            padding-left: 0.5rem;
+        }
+
+        ul li::before {
+            content: '▸';
+            position: absolute;
+            left: -1rem;
+            color: var(--color-primary);
+            font-weight: bold;
+        }
+
         li {
-            margin: 0.7rem 0;
+            margin: var(--spacing-sm) 0;
             font-size: 1.05rem;
             font-weight: 500;
+            transition: transform var(--transition-fast) ease, padding-left var(--transition-fast) ease;
         }
-        
+
+        li:hover {
+            transform: translateX(4px);
+        }
+
+        li:hover::before {
+            color: #29beb0;
+        }
+
         a {
-            color: #2176c1;
+            color: var(--color-primary);
             text-decoration: none;
-            border-bottom: 1px dotted #2176c1;
+            position: relative;
             font-weight: 600;
             font-size: 1.07em;
-            transition: color 0.2s;
+            transition: color var(--transition-fast);
         }
-        
+
+        a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background: var(--gradient-go);
+            transition: width var(--transition-fast) ease;
+        }
+
+        a:hover::after {
+            width: 100%;
+        }
+
         a:hover {
-            color: #174e7c;
-            border-bottom-style: solid;
+            color: var(--color-primary-dark);
         }
         
         a:focus {
@@ -267,36 +383,57 @@ May the charm be with you!
         }
         
         @media (prefers-color-scheme: dark) {
-            body {
-                color: #e2e8f0;
-                background: #0f172a;
+            :root {
+                --color-primary: #60a5fa;
+                --color-primary-dark: #93c5fd;
+                --color-accent: #60a5fa;
+                --color-text: #e2e8f0;
+                --color-text-secondary: #cbd5e1;
+                --color-bg: #0f172a;
+                --color-bg-secondary: #1e293b;
+                --color-heading: #f1f5f9;
+                --gradient-go: linear-gradient(135deg, #60a5fa 0%, #93c5fd 100%);
             }
-            
+
+            body {
+                color: var(--color-text);
+                background: var(--color-bg);
+            }
+
             .container {
-                background: #1e293b;
+                background: var(--color-bg-secondary);
                 box-shadow: 0 2px 12px rgba(0,0,0,0.3);
             }
-            
+
             h1 {
-                color: #f1f5f9;
+                background: var(--gradient-go);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
             }
-            
+
             h2 {
-                color: #cbd5e1;
+                color: var(--color-text-secondary);
             }
-            
+
             p, li {
-                color: #e2e8f0;
+                color: var(--color-text);
             }
-            
+
+            ul li::before {
+                color: var(--color-primary);
+            }
+
+            li:hover::before {
+                color: var(--color-primary-dark);
+            }
+
             a {
-                color: #60a5fa;
-                border-bottom-color: #60a5fa;
+                color: var(--color-primary);
             }
-            
+
             a:hover {
-                color: #93c5fd;
-                border-bottom-color: #93c5fd;
+                color: var(--color-primary-dark);
             }
             
             .skip-link {
@@ -320,9 +457,12 @@ May the charm be with you!
         }
         
         @media (prefers-reduced-motion: reduce) {
-            * {
+            *,
+            *::before,
+            *::after {
                 animation-duration: 0.01ms !important;
                 animation-iteration-count: 1 !important;
+                animation-delay: 0s !important;
                 transition-duration: 0.01ms !important;
             }
         }
@@ -347,7 +487,21 @@ May the charm be with you!
                 <li><strong>Architecture:</strong> Microservices, Event-driven, REST/GraphQL APIs</li>
             </ul>
         </section>
-        
+
+        <section aria-labelledby="projects-heading">
+            <h2 id="projects-heading">🔧 Featured Projects</h2>
+            <ul>
+                <li><strong><a href="https://github.com/juev/hledger-vscode" rel="external noopener">hledger-vscode</a></strong> — VSCode extension with language pack for hledger journal files</li>
+                <li><strong><a href="https://github.com/juev/gclone" rel="external noopener">gclone</a></strong> — Smart Git repository cloner that organizes repos into structured directories</li>
+                <li><strong><a href="https://github.com/juev/hledger-lsp" rel="external noopener">hledger-lsp</a></strong> — Language Server Protocol implementation for hledger (Go)</li>
+            </ul>
+        </section>
+
+        <section aria-labelledby="focus-heading">
+            <h2 id="focus-heading">🎯 Current Focus</h2>
+            <p>Currently exploring AI models and effective prompting techniques, integrating LLM capabilities into development workflows.</p>
+        </section>
+
         <section aria-labelledby="about-heading">
             <h2 id="about-heading">🚀 About Me</h2>
             <ul>
