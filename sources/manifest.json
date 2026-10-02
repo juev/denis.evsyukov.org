@@ -1,7 +1,7 @@
 {
     "name": "Denis Evsyukov - Personal Website",
     "short_name": "Denis Evsyukov",
-    "description": "Personal website of Denis Evsyukov, Golang programmer specializing in distributed systems, cloud computing, and infrastructure automation.",
+    "description": "Personal website of Denis Evsyukov, a backend developer writing Go: real-time multiplayer backends over WebSocket, Kubernetes operators and platform modules, Kafka-based notification pipelines.",
     "start_url": "/",
     "display": "standalone",
     "background_color": "#ffffff",
