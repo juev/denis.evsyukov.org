@@ -20,9 +20,9 @@ May the charm be with you!
     <meta property="og:site_name" content="Denis Evsyukov">
     <meta property="og:locale" content="en_US">
     <meta property="og:url" content="https://denis.evsyukov.org">
-    <meta property="og:image" content="https://static.juev.org/juev.jpg">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
+    <meta property="og:image" content="https://static.juev.org/juev.png">
+    <meta property="og:image:width" content="400">
+    <meta property="og:image:height" content="400">
     
     <!-- Profile specific Open Graph -->
     <meta property="profile:first_name" content="Denis">
@@ -38,7 +38,6 @@ May the charm be with you!
     <link rel="shortcut icon" href="/favicon.ico">
     <link rel="canonical" href="https://denis.evsyukov.org">
     <link rel="manifest" href="/manifest.json">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
     
     <!-- JSON+LD Structured Data -->
     <script type="application/ld+json">
@@ -52,8 +51,9 @@ May the charm be with you!
         "jobTitle": "Golang Developer",
         "description": "Golang programmer specializing in distributed systems, cloud computing, and infrastructure automation",
         "url": "https://denis.evsyukov.org",
-        "image": "https://static.juev.org/juev.jpg",
+        "image": "https://static.juev.org/juev.png",
         "sameAs": [
+            "https://www.juev.org",
             "https://linkedin.com/in/denis-evsyukov",
             "https://github.com/juev",
             "https://infosec.exchange/@devsyukov",
@@ -66,11 +66,7 @@ May the charm be with you!
             "Cloud Computing",
             "Infrastructure Automation",
             "Software Engineering"
-        ],
-        "worksFor": {
-            "@type": "Organization",
-            "name": "Software Development"
-        }
+        ]
     }
     </script>
     
@@ -474,17 +470,18 @@ May the charm be with you!
     <main id="main-content" class="container">
         <header>
             <h1>Hi there! I'm Denis 👋</h1>
-            <p>I'm a Go developer with experience building scalable systems, cloud solutions, and infrastructure automation. I specialize in developing high-performance applications and microservice architecture.</p>
+            <p>I'm a backend developer writing Go. Recent work: a real-time multiplayer backend over WebSocket, Kubernetes operators and platform modules, Kafka-based notification pipelines.</p>
         </header>
-        
+
         <section aria-labelledby="skills-heading">
             <h2 id="skills-heading">🛠️ Technologies & Skills</h2>
             <ul>
-                <li><strong>Programming Languages:</strong> Go</li>
-                <li><strong>Cloud Platforms:</strong> Kubernetes</li>
-                <li><strong>Databases:</strong> PostgreSQL, Redis</li>
-                <li><strong>Infrastructure:</strong> Docker, Terraform, CI/CD</li>
-                <li><strong>Architecture:</strong> Microservices, Event-driven, REST/GraphQL APIs</li>
+                <li><strong>Languages:</strong> Go, Python, Bash</li>
+                <li><strong>Databases:</strong> PostgreSQL, MySQL, Redis, MongoDB</li>
+                <li><strong>Messaging:</strong> Kafka, RabbitMQ, NATS</li>
+                <li><strong>Protocols:</strong> gRPC, REST, WebSocket, GraphQL</li>
+                <li><strong>Infrastructure:</strong> Kubernetes, Docker, Helm, Terraform</li>
+                <li><strong>Observability:</strong> Prometheus, Grafana, Jaeger</li>
             </ul>
         </section>
 
@@ -493,35 +490,36 @@ May the charm be with you!
             <ul>
                 <li><strong><a href="https://github.com/kevincobain2000/gobrew" rel="external noopener">gobrew</a></strong> — Go version manager written in Go (400+ stars), where I'm a regular contributor</li>
                 <li><strong><a href="https://github.com/forgekeep/nebula-mesh" rel="external noopener">nebula-mesh</a></strong> — self-hosted control plane for Slack Nebula mesh VPN (Go, SQLite, htmx)</li>
-                <li><strong><a href="https://github.com/juev/hledger-lsp" rel="external noopener">hledger-lsp</a></strong> — Language Server Protocol implementation for hledger journal files (Go)</li>
-                <li><strong><a href="https://github.com/juev/hledger-vscode" rel="external noopener">hledger-vscode</a></strong> — VSCode extension with language pack for hledger journal files</li>
+                <li><strong><a href="https://github.com/juev/hledger-lsp" rel="external noopener">hledger-lsp</a></strong> — language server for hledger journal files (Go), with extensions for <a href="https://github.com/juev/hledger-vscode" rel="external noopener">VS Code</a> and <a href="https://github.com/juev/hledger-zed" rel="external noopener">Zed</a></li>
+                <li><strong><a href="https://github.com/juev/linkding" rel="external noopener">linkding</a></strong> — independent Go port of the linkding bookmark manager (SQLite, PostgreSQL), plus <a href="https://github.com/juev/shareding" rel="external noopener">shareding</a>, an Android client with an offline queue</li>
+                <li><strong><a href="https://github.com/juev/tor-relay-scanner-go" rel="external noopener">tor-relay-scanner-go</a></strong> — Tor relay availability checker for finding bridges in censored networks (Go)</li>
             </ul>
         </section>
 
         <section aria-labelledby="focus-heading">
             <h2 id="focus-heading">🎯 Current Focus</h2>
-            <p>Currently exploring AI models and effective prompting techniques, integrating LLM capabilities into development workflows.</p>
+            <p>I work with LLM coding agents every day and build tooling around them, such as <a href="https://github.com/juev/stop-slop" rel="external noopener">stop-slop</a>, a Claude Code skill that strips AI writing patterns from English and Russian prose. Longer reviews of tools and technologies go to <a href="https://research.evsyukov.org/" rel="external noopener">research.evsyukov.org</a> (in Russian).</p>
         </section>
 
         <section aria-labelledby="about-heading">
             <h2 id="about-heading">🚀 About Me</h2>
             <ul>
-                <li>🌱 Continuously learning new technologies and frameworks</li>
+                <li>📍 Based in Moscow, Russia</li>
+                <li>📚 I write a blog at <a href="https://www.juev.org" rel="external noopener me">www.juev.org</a> (in Russian)</li>
                 <li>👯 Open to collaboration on open source projects</li>
-                <li>💡 Passionate about solving complex technical challenges</li>
-                <li>📚 Sharing knowledge through technical articles and talks</li>
                 <li>👷 <a href="https://github.com/juev/about.me/raw/master/Resume/Denis_Evsyukov_EN.pdf" rel="external noopener" download>Download Resume</a></li>
             </ul>
         </section>
-        
+
         <section aria-labelledby="contact-heading">
             <h2 id="contact-heading">📫 Get in Touch</h2>
-            <p>I'd be happy to discuss interesting projects and collaboration opportunities. Feel free to reach out via <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#100;&#101;&#110;&#105;&#115;&#64;&#101;&#118;&#115;&#121;&#117;&#107;&#111;&#118;&#46;&#111;&#114;&#103;">email</a> or connect through social platforms:</p>
+            <p>Write me an <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#100;&#101;&#110;&#105;&#115;&#64;&#101;&#118;&#115;&#121;&#117;&#107;&#111;&#118;&#46;&#111;&#114;&#103;">email</a> or find me here:</p>
             <ul>
-                <li><a href="https://linkedin.com/in/denis-evsyukov" rel="external noopener">LinkedIn</a> - for professional networking</li>
-                <li><a href="https://github.com/juev" rel="external noopener">GitHub</a> - my projects and open source contributions</li>
-                <li><a href="https://infosec.exchange/@devsyukov" rel="external noopener me">Mastodon</a> - thoughts on technology</li>
-                <li><a href="https://t.me/evsyukov" rel="external noopener">Telegram</a> - for quick communication</li>
+                <li><a href="https://github.com/juev" rel="external noopener me">GitHub</a> — projects and open source contributions</li>
+                <li><a href="https://www.juev.org" rel="external noopener me">Blog</a> — articles and weekly links</li>
+                <li><a href="https://infosec.exchange/@devsyukov" rel="external noopener me">Mastodon</a> — short notes on technology</li>
+                <li><a href="https://linkedin.com/in/denis-evsyukov" rel="external noopener me">LinkedIn</a> — professional contacts</li>
+                <li><a href="https://t.me/evsyukov" rel="external noopener me">Telegram</a> — quick messages</li>
             </ul>
         </section>
         
